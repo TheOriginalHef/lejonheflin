@@ -1,0 +1,222 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Particle background */
+#particles-js{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    background:#0a0a0a;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(10px);
+    z-index:10;
+}
+
+.logo{
+    color:#ff1a1a;
+    font-weight:600;
+    font-size:24px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff1a1a;
+}
+
+/* Hero */
+#home{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:60px;
+    color:#ff1a1a;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:18px;
+    color:#ff1a1a;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:transparent;
+    border:2px solid #ff1a1a;
+    color:white;
+    border-radius:5px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff1a1a;
+    box-shadow:0 0 15px #ff1a1a;
+}
+
+/* Sections */
+section{
+    padding:120px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:32px;
+    color:#ff1a1a;
+}
+
+/* About */
+.about-container{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    line-height:1.6;
+}
+
+/* Projects */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border-radius:12px;
+    padding:30px;
+    border:1px solid rgba(255,0,0,0.2);
+    backdrop-filter:blur(10px);
+
+    transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
+    transform-style:preserve-3d;
+    perspective:1000px;
+}
+
+.card:hover{
+    box-shadow:0 20px 40px rgba(255,0,0,0.4);
+}
+
+/* Skills */
+#skills{
+    text-align:center;
+}
+
+.skills-container{
+    max-width:700px;
+    margin:auto;
+}
+
+.skill{
+    margin:25px 0;
+    text-align:left;
+}
+
+.skill span{
+    font-size:14px;
+}
+
+.skill-bar{
+    width:100%;
+    height:12px;
+    background:#1a1a1a;
+    border-radius:20px;
+    margin-top:8px;
+    overflow:hidden;
+}
+
+.skill-fill{
+    height:100%;
+    width:0;
+    background:linear-gradient(90deg,#ff0000,#ff4d4d);
+    border-radius:20px;
+    transition:width 1.5s ease;
+    box-shadow:0 0 10px rgba(255,0,0,0.7);
+}
+
+/* Contact */
+#contact{
+    text-align:center;
+}
+
+.socials{
+    margin-top:20px;
+}
+
+.socials a{
+    font-size:24px;
+    margin:0 10px;
+    color:white;
+    transition:0.3s;
+}
+
+.socials a:hover{
+    color:#ff1a1a;
+}
+
+/* Hero Paragraph Blinking Cursor */
+#typing::after{
+    content:"|";
+    margin-left:5px;
+    animation:blink 1s infinite;
+    color:#ff1a1a;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+/* Resume Button */
+.resume-btn{
+    margin-left:15px;
+    background:transparent;
+    border:2px solid #ff1a1a;
+}
+
+.resume-btn:hover{
+    background:#ff1a1a;
+    box-shadow:0 0 15px #ff1a1a;
+}
