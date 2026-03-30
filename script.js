@@ -133,3 +133,27 @@ cards.forEach(card => {
     card.style.transform = "rotateX(0) rotateY(0) scale(1)";
   });
 });
+
+// Initialize EmailJS
+(function () {
+  emailjs.init("lSaHWLqz-iIj_Wthp"); // 🔑 Replace YOUR_PUBLIC_KEY
+})();
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("status");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+    status.innerText = "Sending...";
+
+    emailjs.sendForm("service_0rncfwh", "template_kq07sdl", this) // Replace YOUR_SERVICE_ID, and YOUR_TEMPLATE_ID
+    .then(function () {
+      status.innerText = "✅ Message sent successfully!";
+      form.reset();
+    })
+    .catch(function (error) {
+      status.innerText = "❌ Failed to send message.";
+      console.error(error);
+    });
+});
